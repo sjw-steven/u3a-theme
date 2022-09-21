@@ -10,7 +10,7 @@ if ($rawdata) {
 
     switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
         case 'push':
-            exec('cd /var/www/html/wp-content/themes/u3a;git pull');
+            exec('/var/www/html/wp-content/themes/pull.sh');
             echo "git pull done";
             break;
 
