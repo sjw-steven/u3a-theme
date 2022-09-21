@@ -17,7 +17,7 @@ if ($rawdata) {
             echo "git pull done";
             break;
 
-        case 'pull_request':
+        case 'push':
             switch ($payload->{'action'}) {
                 case 'opened':
                 case 'closed':
