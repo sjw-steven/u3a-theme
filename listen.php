@@ -1,4 +1,7 @@
 <?php
+/*
+ listen git pull request
+ */
 
 $rawdata = file_get_contents('php://input');
 
