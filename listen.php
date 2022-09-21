@@ -6,6 +6,8 @@
 $rawdata = file_get_contents('php://input');
 
 if ($rawdata) {
+    file_put_contents("/var/www/html/wp-content/themes/u3a/listen.log", $rawdata);
+
     $payload = json_decode($rawdata);
 
     switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
@@ -27,8 +29,7 @@ if ($rawdata) {
             break;
 
         default:
-            header('HTTP/1.0 404 Not Found');
-            die();
+            echo "Other Event";
     }
 } else {
     echo "Error Request";
