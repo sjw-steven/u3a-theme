@@ -8,7 +8,7 @@ $rawdata = file_get_contents('php://input');
 if ($rawdata) {
     $payload = json_decode($rawdata);
 
-    switch (strtolower($_SERVER['X-GitHub-Event'])) {
+    switch (strtolower($_SERVER['HTTP_X_GITHUB_EVENT'])) {
         case 'ping':
             echo 'pong';
             exec('cd /var/www/html/wp-content/themes/u3a;git pull');
