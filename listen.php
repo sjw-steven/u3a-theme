@@ -27,7 +27,7 @@ if ($rawdata) {
             break;
 
         default:
-            echo "Other Event " . strtolower($_SERVER['X-GitHub-Event']);
+            echo "Other Event " . strtolower($_SERVER['HTTP_X_GITHUB_EVENT']);
     }
 } else {
     echo "Error Request";
