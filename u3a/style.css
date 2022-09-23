@@ -1,19 +1,8 @@
 /*
-Theme Name: Conceptly Child U3A
-Theme: conceptly
-Version: 1.3.33
-Description: Conceptly's subtopic
+Theme Name: U3A (Neve)
+Theme: neve
+Version: 0.1.0
 Author: jingwen shi
-Author URI: https://wordpress.org/
-Theme URI: https://wordpress.org/themes/Conceptly/
-Template: conceptly
-All files, unless otherwise stated, are released under the GNU General Public
-License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned
-with others.
  */
 
-@import url("../conceptly/style.css");
-
+@import url("../neve/style.css");
