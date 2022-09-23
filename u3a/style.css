@@ -6,3 +6,41 @@ Author: jingwen shi
  */
 
 @import url("../neve/style.css");
+
+/*
+    1.alignfull - Resize to a viewport to highlight the subject
+ */
+.alignfull {
+    height: calc(100vh - 76px);
+}
+
+/*
+    2.header - Adjust the header column to a transparent style, and enhance the visual effect with the large picture on the first screen
+ */
+.wrapper > header.header {
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+#header-grid > nav.header-main {
+    background-color: unset;
+}
+
+/*
+    3.wp-block-image - Increase the smooth zoom animation when the mouse hovers to enhance the interactive experience
+ */
+figure.wp-block-image {
+    overflow: hidden;
+}
+
+figure.wp-block-image > img {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+figure.wp-block-image > img:hover {
+    transform: scale(1.2);
+}
