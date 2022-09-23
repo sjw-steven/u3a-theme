@@ -11,7 +11,7 @@ Author: jingwen shi
     1.alignfull - Resize to a viewport to highlight the subject
  */
 .alignfull {
-    height: calc(100vh - 76px);
+    height: 100vh;
 }
 
 /*
