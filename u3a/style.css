@@ -7,15 +7,49 @@ Author: jingwen shi
 
 @import url("../neve/style.css");
 
+@font-face {
+    font-family: 'Aboreto';
+    src: url("./font/Aboreto/Aboreto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url("./font/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 /*
-    1.alignfull - Resize to a viewport to highlight the subject
+    1.scroll-behavior - Add smooth transition effect to animation
+ */
+html, body {
+    scroll-behavior: smooth;
+}
+
+/*
+    2.fontfamily - Resize to a viewport to highlight the subject
+ */
+:not(p) {
+    font-family: Aboreto, serif;
+}
+
+p {
+    font-family: Manrope, serif;
+}
+
+/*
+    3.alignfull - Resize to a viewport to highlight the subject
  */
 .alignfull {
     height: 100vh;
 }
 
 /*
-    2.header - Adjust the header column to a transparent style, and enhance the visual effect with the large picture on the first screen
+    4.header - Adjust the header column to a transparent style, and enhance the visual effect with the large picture on the first screen
  */
 .wrapper > header.header {
     position: absolute;
@@ -29,7 +63,7 @@ Author: jingwen shi
 }
 
 /*
-    3.wp-block-image - Increase the smooth zoom animation when the mouse hovers to enhance the interactive experience
+    5.wp-block-image - Increase the smooth zoom animation when the mouse hovers to enhance the interactive experience
  */
 figure.wp-block-image {
     overflow: hidden;
@@ -42,5 +76,22 @@ figure.wp-block-image > img {
 }
 
 figure.wp-block-image > img:hover {
+    transform: scale(1.2);
+}
+
+/*
+    6.nv-post-thumbnail-wrap - Increase the smooth zoom animation when the mouse hovers to enhance the interactive experience
+ */
+.nv-post-thumbnail-wrap {
+    overflow: hidden;
+}
+
+.nv-post-thumbnail-wrap > a > img {
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.nv-post-thumbnail-wrap > a > img:hover {
     transform: scale(1.2);
 }
