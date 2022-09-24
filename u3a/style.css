@@ -17,6 +17,36 @@ Author: jingwen shi
     src: url("./font/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
 }
 
+@-webkit-keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+    20% {
+        transform: rotate(-10deg);
+    }
+    30% {
+        transform: rotate(5deg);
+    }
+    40% {
+        transform: rotate(-5deg);
+    }
+    50%, 100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -141,7 +171,25 @@ figure.aligncenter > img:hover {
     cursor: pointer;
 }
 
-.top-button:hover{
+.top-button:hover {
     background-color: black;
     color: white;
+}
+
+/*
+    10.wp-block-cover__inner-container - Ease in animation visual effects
+ */
+div.wp-block-cover__inner-container {
+    animation: fly 2s ease 1;
+    animation-fill-mode: forwards;
+}
+
+/*
+    11.aligncenter - Added shaking animations for icons such as CALL, implying to call us quickly
+ */
+figure.aligncenter > img {
+    animation: shake 1s ease 4;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 4;
+    -webkit-animation-iteration-count: 4; /* Safari 和 Chrome */
 }
