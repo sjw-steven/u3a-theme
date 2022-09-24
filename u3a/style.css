@@ -227,3 +227,27 @@ figure.aligncenter > img {
 .music-button > img.is-play {
     animation: play 3s linear infinite;
 }
+
+/*
+    13. h3 Adjust uncentered element
+ */
+h3.has-neve-text-color-color {
+    text-align: center;
+}
+
+/*
+    14. entry-title > a Control the title text to display only one line
+ */
+.entry-title a {
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*
+    15. has-text-align-center - Adjust the font size to highlight the title slogan
+ */
+h2.has-text-align-center {
+    font-size: 70px;
+}
