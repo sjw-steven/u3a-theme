@@ -1,4 +1,5 @@
 chown -R webapp:webapp /var/www/html/wp-content/themes
 chmod -R 777 /var/www/html/wp-content/themes
 cd /var/www/html/wp-content/themes
+git stash
 git pull 2>&1 > /var/www/html/wp-content/themes/u3a/git.log
