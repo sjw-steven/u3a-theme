@@ -92,7 +92,7 @@ p {
 
 /*
     4.header - Adjust the header column to a transparent style, and enhance the visual effect with the large picture on the first screen
- */
+    Remove
 .wrapper > header.header {
     position: absolute;
     top: 0;
@@ -103,6 +103,7 @@ p {
 #header-grid > nav.header-main {
     background-color: unset;
 }
+ */
 
 /*
     5.wp-block-image - Increase the smooth zoom animation when the mouse hovers to enhance the interactive experience
