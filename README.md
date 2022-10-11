@@ -43,15 +43,15 @@ Child Theme Modification Guidelines:
 
 Local Environment Summary
 
-In order to simulate the real production environment, we use vagrant to build a local environment, which can ensure the
-consistency of the local environment and the online environment to the greatest extent. For how to build a vagrant
-environment, I have added a video link to guide the installation in README.md. The first thing to do is to install and
-download vagrant from the official website, as well as install the tool vitrualbox to run the linux environment download
-the image file required by vagrant, and use the command line to create a local environment and build the required
-software environment for wordpress in the configured environment, such as php, mysql, nginx, etc. In order to facilitate
-the development and submission of code, I choose phpstorm as the development tool. Configure version management in
-phpstorm and associate the local git repository with the github remote repositoryto easily push the code to the remote
-github repository
+In order to simulate the real production environment, we use vagrant to build a local environment, which can ensure the consistency of the local environment and the online environment to the greatest extent. On how to set up the vagrant environment, I have added a video link to the README.md to guide the installation. The first thing to do is to install and download vagrant from the official website, and the installation tool vitualbox to run the linux environment to download the image files required for vagrant, and use the command line to create a local environment and build the required software environment for wordpress in the configuration environment, such as php, mysql , nginx, etc.
+
+After configuring vagrant:
+Use "vagrant init centos7" to initialize the environment and you will get a Vagrantfile file
+
+We need to make some changes to the Vagrantfile first, remove the comment from "config.vm.network "private_network", ip: "192.168.33.10", which means to create a private network for our virtual machine so that we can access it from the computer It is convenient to access the services in the virtual machine. Then we use the "vagrant up" command to run the virtual machine, and after running the virtual machine through "vagrant ssh", use the yum command inside the virtual machine to install the php/mysql/nginx software required by wordpress
+
+In order to facilitate development and code submission, I choose phpstorm as the development tool. Configure version management in phpstorm, associate the local git warehouse with the github remote warehouse, and facilitate pushing the code to the remote github warehouse
+
 
 For the construction process, refer to the following link:
 
