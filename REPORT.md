@@ -11,6 +11,8 @@
 * References
 * Appendix
 
+# Abstract
+
 More and more people use the Internet to communicate and transport, and the elderly are no exception. With the
 development and application of the Internet, making friends has become easier and more convenient, and it is very common
 to build friends platforms on the Internet.
