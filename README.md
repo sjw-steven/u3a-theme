@@ -1,9 +1,10 @@
 # u3a-theme
+
 An wordpress child theme
 
-
 # Theme Devlopment
-In the theme directory there are the following files 
+
+In the theme directory there are the following files
 
     u3a:
 
@@ -27,7 +28,6 @@ In the theme directory there are the following files
 
     README.md - Documentation about the subject code and the required environment and modification methods
 
-
 Child Theme Modification Guidelines:
 
     The modification of the theme html style code can be edited and modified in style.css. 
@@ -40,13 +40,27 @@ Child Theme Modification Guidelines:
     enter the header.ph/index.php and other files, and edit the code in the file will overwrite the corresponding parent theme location code
 
 # Deployment
-    
-To modify the code of the production environment, you first need to install the local development environment of vagrant+centos7.3+php8.1+mysql5.7.30+nginx1.20 and other software. For the construction process, refer to the following link:
+
+Local Environment Summary
+
+In order to simulate the real production environment, we use vagrant to build a local environment, which can ensure the
+consistency of the local environment and the online environment to the greatest extent. For how to build a vagrant
+environment, I have added a video link to guide the installation in README.md. The first thing to do is to install and
+download vagrant from the official website, as well as install the tool vitrualbox to run the linux environment download
+the image file required by vagrant, and use the command line to create a local environment and build the required
+software environment for wordpress in the configured environment, such as php, mysql, nginx, etc. In order to facilitate
+the development and submission of code, I choose phpstorm as the development tool. Configure version management in
+phpstorm and associate the local git repository with the github remote repositoryto easily push the code to the remote
+github repository
+
+For the construction process, refer to the following link:
 
 1. https://www.youtube.com/watch?v=Hgsn6wpbqsE
 2. https://www.youtube.com/watch?v=raMCF-xXVNI
 
-After the development environment is built, you need to use git to pull the code to the local to build the local development environment. After creating a directory folder locally, enter the command interface and execute the following commands:
+After the development environment is built, you need to use git to pull the code to the local to build the local
+development environment. After creating a directory folder locally, enter the command interface and execute the
+following commands:
 
     1, git init - create a git local library in the local directory
     2. git remote add origin main https://github.com/sjw-steven/u3a-theme.git - Add a remote repository
@@ -55,6 +69,11 @@ After the development environment is built, you need to use git to pull the code
     5. git commit -m 'modification description' - add a comment description for the modification
     6. git push pushes local changes to remote branches
 
-Configure the webhook in the setting interface of the github repository. After the local push is submitted to the github server, it will request the link left in the webhook configuration. This link is to perform corresponding operations after monitoring the github push message in our server.
+Configure the webhook in the setting interface of the github repository. After the local push is submitted to the github
+server, it will request the link left in the webhook configuration. This link is to perform corresponding operations
+after monitoring the github push message in our server.
 
-In the server, git init is also used to create a local warehouse, and the code is pulled from the remote warehouse. After the server receives the push message, the webhook accesses the listen.php file in the server, and uses the exec command in the listen file to execute the shell command to pull. The latest code in the github repository can automatically deploy the code to the production environment after pushing the modification locally
+In the server, git init is also used to create a local warehouse, and the code is pulled from the remote warehouse.
+After the server receives the push message, the webhook accesses the listen.php file in the server, and uses the exec
+command in the listen file to execute the shell command to pull. The latest code in the github repository can
+automatically deploy the code to the production environment after pushing the modification locally
